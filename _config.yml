@@ -1,0 +1,7 @@
+lsi: false
+safe: true
+source: https://github.com/greg-martinez44/greg-martinez44.github.io
+incremental: false
+highlighter: rouge
+title: Greg's homepage
+description: My homepage for test GitHub Pages
