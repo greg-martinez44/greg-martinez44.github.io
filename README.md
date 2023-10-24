@@ -1,8 +1,2 @@
-# My Homepage
-This is the first page in my github pages.
-
-## This is a test page
-Here is a [link](./about) to another page???
-
-# What if I did this?
-This is a second test first-level header!
+# This is a test GitHub Page
+I'm using this to test out some features for other use cases.
