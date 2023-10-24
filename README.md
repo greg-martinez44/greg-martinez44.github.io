@@ -1,8 +1,4 @@
----
-title: My Homepage
-date: 2023-10-23
----
-
+# My Homepage
 This is the first page in my github pages.
 
 ## This is a test page
