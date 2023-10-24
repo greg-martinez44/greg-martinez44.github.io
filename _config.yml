@@ -1,3 +1,4 @@
 safe: true
 title: Greg's homepage
 description: My homepage for test GitHub Pages
+theme: minima
