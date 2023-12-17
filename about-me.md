@@ -4,6 +4,6 @@ date: 2023-10-23
 ---
 
 
-This is a page that is about me. I can describe myself here.
+Although my position is called "data engineer", I do a lot more than that. I also help with techincal writing projects and AI research.
 
-I am a silly dude stuck in tech but this is kind of cool.
+Writing and AI are two areas of interest.
