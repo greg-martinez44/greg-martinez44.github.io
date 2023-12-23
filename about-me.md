@@ -11,7 +11,7 @@ I eventually moved on to Honeywell-Intelligrated as a CMMS (Computer Maintenance
 
 I left Honeywell-Intelligrated for an online education company called ABC Learning. I was a software developer/data engineer working mostly in PHP and Snowflake. This was my first experience with a mature CI/CD pipeline and proper software development practices, like code reviews. The pace of the job was too slow for me.
 
-I came to Milliman looking for more opportunities to explore and learn. I dove into Databricks and cloud computing. I learned all about how Databricks manages clusters and how it connects to external storage services, like S3. I led the effort to migrate over 25 workspaces to Unity Catalog in an efficient, automated manner. I'm still learning about all kinds of things, and I hope to continue learning more.
+I came to Milliman looking for more opportunities to explore and learn. I dove into Databricks and cloud computing. I'm learning all about how Databricks manages clusters and how it connects to external storage services, like S3. I'm learning how AWS manages roles and permissions and user identity. I'm learning how to work with cutting-edge technology, like OpenAI. I'm learning how to switch from support engineer to data engineer to AI engineer to technical writer and back again. I plan to keep learning as much as I can.
 
 ## What I like to do
 
