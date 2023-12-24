@@ -15,8 +15,10 @@ I came to Milliman looking for more opportunities to explore and learn. I dove i
 
 ## What I like to do
 
-I like to read. I read a lot of BFF (Big Fat Fantasy) novels. I also read a lot of books about books (*The Library*, *The Art of Libromancy*, *In Praise of Good Bookstore*, *The Book*, *The Manuscript Club*, *The Library Book*, *The Devil's Library*, etc). I like to cook -- I like Mexican-style food, like enchiladas or tacos.
+I like to read. I read a lot of BFF (Big Fat Fantasy) novels. I like books that discuss attention and how our attention has been affected by the digital age. I read books about books and books on reading (*The Library*, *The Art of Libromancy*, *In Praise of Good Bookstores*, *The Book*, *The Manuscript Club*, *The Library Book*, *The Devil's Library*, etc). The book, as an object, is fascinating and is saturated in history and meaning.
 
-I like to write as well. I like to get my ideas across to people. I find the craft very satisfying.
+I like to cook. I like Mexican-style food, like enchiladas or tacos. I like to make salsas and sauces. I even make my own tortillas.
+
+I like to write as well. I like to get my ideas across to people. Writing is one of the few ways that I can expresss my creative urges. Even if what I write from day to day is very straightforward and fact-heavy. The push and pull of getting the balance of a sentence just right; the struggle to find the right word; the joy when someone references your work and can find the answer they were looking for. I find the craft very satisfying.
 
 ## What I do for work
