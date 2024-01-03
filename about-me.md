@@ -22,3 +22,7 @@ I like to cook. I like Mexican-style food, like enchiladas or tacos. I like to m
 I like to write as well. I like to get my ideas across to people. Writing is one of the few ways that I can expresss my creative urges. Even if what I write from day to day is very straightforward and fact-heavy. The push and pull of getting the balance of a sentence just right; the struggle to find the right word; the joy when someone references your work and can find the answer they were looking for. I find the craft very satisfying.
 
 ## What I do for work
+
+My title is "data engineer", but I wear many hats. I have helped with some data engineering projects -- creating pipelines for migrating to Unity or helping practices transfer data from one account to another. But I also play support; I help the technical writing team with MCP documentation and beyond; I help with AI engineering and creating chatbots; and I help cloud engineering efforts for MCP to update scripts and workflows.
+
+I would like to focus more on technical writing. I have plans to work on some more detailed documentation for working in Databricks. I also have plans to extend our AI offerings both through Azure OpenAI and Databricks's model.
