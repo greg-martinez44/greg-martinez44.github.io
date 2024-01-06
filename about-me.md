@@ -27,6 +27,6 @@ My title is "data engineer", but I wear many hats.
 
 I've done plenty of data engineering. I've created pipelines for our recent Unity migration and helped practices transfer large amounts of data from one account to another.
 
-But I also play support; I help the technical writing team with MCP documentation and beyond; I help with AI engineering and building chatbots; and I help cloud engineering efforts for MCP to update scripts and workflows.
+But I do much more than just pipelines. I've helped support users with their cloud infrastructure. I've helped the Knowledge Managemnt team with MCP documentation and myriad other topics. I've helped explore our AI use cases in OpenAI and in Databricks.
 
 I would like to focus more on technical writing. I have plans to work on some more detailed documentation for working in Databricks. I also have plans to extend our AI offerings both through Azure OpenAI and Databricks's model.
