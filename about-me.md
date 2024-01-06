@@ -23,6 +23,10 @@ I like to write as well. I like to get my ideas across to people. Writing is one
 
 ## What I do for work
 
-My title is "data engineer", but I wear many hats. I have helped with some data engineering projects -- creating pipelines for migrating to Unity or helping practices transfer data from one account to another. But I also play support; I help the technical writing team with MCP documentation and beyond; I help with AI engineering and creating chatbots; and I help cloud engineering efforts for MCP to update scripts and workflows.
+My title is "data engineer", but I wear many hats.
+
+I've done plenty of data engineering. I've created pipelines for our recent Unity migration and helped practices transfer large amounts of data from one account to another.
+
+But I also play support; I help the technical writing team with MCP documentation and beyond; I help with AI engineering and building chatbots; and I help cloud engineering efforts for MCP to update scripts and workflows.
 
 I would like to focus more on technical writing. I have plans to work on some more detailed documentation for working in Databricks. I also have plans to extend our AI offerings both through Azure OpenAI and Databricks's model.
