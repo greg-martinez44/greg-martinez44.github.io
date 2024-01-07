@@ -24,4 +24,8 @@ It is Databricks' "most secure baseline for the data plane" and is required to r
 
 ## Serverless computing
 
-Workspaces with the compliance security profile enabled can us serverless computing for HIPAA workloads.
+Workspaces with the compliance security profile enabled can us serverless computing for HIPAA workloads. The compute resources are managed by Databricks but are marked as "SAFE" – these are physically separate machines than those used for non-compliant workspaces. The compute workloads and clusters are very contained:
+
+> To protect customer data within the serverless compute plane, serverless compute runs within a network boundary for the workspace, with various layers of security to isolate different Databricks customer workspaces and additional network controls between clusters of the same customer.
+
+Data is saved directly to S3 buckets in the customer's account – so there's no worry of saving sensitive data outside of the customer's organization.
