@@ -2,5 +2,7 @@ safe: true
 title: Greg's research
 description: My research and writing
 theme: minima
-include:
-  - _posts
+
+defaults:
+  - versions:
+      fpt: '*'

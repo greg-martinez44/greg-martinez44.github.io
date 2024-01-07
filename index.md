@@ -1,8 +1,6 @@
 ---
 title: My Homepage
 date: 2023-10-23
-versions:
-    fpt: '*'
 children:
   - _posts/compliance-security-profile.md
 ---
