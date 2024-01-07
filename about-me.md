@@ -1,5 +1,7 @@
 ---
 title: About me
+versions:
+    fpt: '*'
 date: 2023-10-23
 showMiniToc: false
 ---
