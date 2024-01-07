@@ -4,5 +4,8 @@ description: My research and writing
 theme: minima
 
 defaults:
-  - versions:
-      fpt: '*'
+  - scope:
+      path: ""
+    values:
+      versions:
+        fpt: '*'
