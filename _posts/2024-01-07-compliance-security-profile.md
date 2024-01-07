@@ -1,7 +1,7 @@
 ---
 title: "Databricks's compliance security profile (CSP)"
 date: 2024-01-07
-categories:
+tags:
   - databricks
   - reference
   - security
