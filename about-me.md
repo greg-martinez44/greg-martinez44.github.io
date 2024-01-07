@@ -1,6 +1,7 @@
 ---
 title: About me
 date: 2023-10-23
+showMiniToc: false
 ---
 
 ## Where I come from
