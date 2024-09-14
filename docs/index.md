@@ -92,7 +92,6 @@ The initial set up depends on your operating system.
 MacOS has ruby installed by default, but it's most likely an older, out-of-date version. Install the newest version of
 Ruby with Homebrew.
 
-
 1. Go to the `docs` folder in your GitHub Pages project. Install `jekyll` and `bundler`.
 
     ```bash
