@@ -1,8 +1,13 @@
 {
+    "MD013": {
+        "line_length": 120,
+        "code_blocks": false
+    },
     "MD022": {
         "lines_below": [0]
     },
     "MD025": {
         "front_matter_title": ""
-    }
+    },
+    "MD033": false
 }
