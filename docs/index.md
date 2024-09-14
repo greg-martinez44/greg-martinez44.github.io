@@ -57,9 +57,26 @@ Follow the instructions in GitHub's article on [creating a GitHub Pages site wit
 
 ## Edit your Gemfile
 
+We add the `just-the-docs` template to our Gemfile because we're using bundler.
+
+```ruby
+gem "just-the-docs", "0.10.0"
+```
+
 ## Edit your GitHub Action workflow
 
+If you followed the example in [Create your GitHub pages site](#create-your-github-pages-site), you'll need to update your
+GitHub Action workflow to use Ruby.
+
+1. Replace the auto-generated workflow file with the [Jekyll workflow template]{:target="_blank"}.
+
+1. Follow the [Just the Doc instructions on hosting your docs from an existing project repo]{:target="_blank"}.
+
 ## Edit your `_config.yml` file
+
+Edit your `_config.yml` file for extra features and callout formatting.
+
+See [this project's configuration file]{:target="_blank"}.
 
 ## Test your site locally
 
@@ -116,3 +133,6 @@ Ruby with Homebrew.
 [Jekyll Windows installation guide]: https://jekyllrb.com/docs/installation/windows/
 [Homebrew]: https://brew.sh/
 [creating a GitHub Pages site with Jekyll]: https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll
+[Jekyll workflow template]: https://github.com/just-the-docs/just-the-docs-template/blob/main/.github/workflows/pages.yml
+[Just the Doc instructions on hosting your docs from an existing project repo]: https://github.com/just-the-docs/just-the-docs-template/blob/main/README.md#hosting-your-docs-from-an-existing-project-repo
+[this project's configuration file]: https://github.com/greg-martinez44/greg-martinez44.github.io/blob/main/docs/_config.yml
