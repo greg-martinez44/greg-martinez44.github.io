@@ -1,7 +1,6 @@
 ---
 title: About me
 last_modified_date: 2023-10-23
-nav_order: 2
 ---
 
 # About me
