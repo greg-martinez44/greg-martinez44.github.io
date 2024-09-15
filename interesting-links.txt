@@ -1,0 +1,10 @@
+https://github.com/gjtorikian/extended-markdown-filter
+
+https://github.com/gjtorikian/jekyll-html-pipeline
+
+https://github.blog/engineering/how-github-uses-github-to-document-github/
+
+https://jekyll-one-org.github.io/pages/public/learn/bookshelf/jekyll_collections/
+
+https://github.com/jekyll/jekyll-sitemap
+

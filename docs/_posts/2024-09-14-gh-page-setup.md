@@ -1,13 +1,8 @@
 ---
 title: Set up GitHub Pages
-layout: default
+layout: post
 date: 2024-09-14
-nav_order: 3
-last_modified_date: 2024-09-14
 ---
-
-# Set up GitHub Pages
-{: .no_toc }
 
 This page describes how I set up this GitHub Pages site with [Just the Docs]{:target="_blank"}.
 

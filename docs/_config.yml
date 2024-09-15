@@ -28,8 +28,39 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  greg-martinez44
 
+# Default values
+defaults:
+  -
+    scope:
+      path: "" # Includes all files in the project
+      type: "pages"
+    values:
+      layout: default
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+
 # Build settings
 theme: just-the-docs
+
+# GitHub Pages extras
+gems:
+  - jekyll-html-pipeline
+  - extended-markdown-filter
+markdown: HTMLPipeline
+html_pipeline:
+  filters:
+    - "ExtendedMarkdownFilter"
+  context:
+    emf_use_blocks: true
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
 
 # Enable or disable the site search
 # Supports true (default) or false
@@ -70,7 +101,8 @@ enable_copy_code_button: true
 last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the front matter
 last_edit_time_format: "%b %e %Y." # uses ruby's time format: https://ruby-doc.org/stdlib-2.7.0/libdoc/time/rdoc/Time.html
 
-callouts_level: quiet # or loud
+# Callout formatting
+callouts_level: quiet
 callouts:
   highlight:
     color: yellow
@@ -86,3 +118,8 @@ callouts:
   warning:
     title: Warning
     color: red
+
+# Collections
+collections:
+  service_catalog:
+    output: true
