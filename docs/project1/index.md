@@ -10,17 +10,12 @@ ticket_name: Collections
 
 This is a test project 1.
 
-{% raw %}{{ site.data.mcp.tickets.Collections.link }}{% endraw %}
+## tickets
 
+[Collections]{{ site.data.mcp.tickets.Collections }}
 
 <!-- <ul>
-{% for ticket in site.data.mcp.tickets %}
-{% assign org = org_hash[1] %}
-  <li>
-    <a href="https://github.com/{{ org.username }}">
-      {{ org.name }}
-    </a>
-    ({{ org.members | size }} members)
-  </li>
-{% endfor %}
+  {% for ticket in site.data.tickets.tickets %}
+    {{ ticket.name }} - {{ ticket.link }}
+  {% endfor %}
 </ul> -->
