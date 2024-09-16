@@ -1,5 +1,6 @@
 title: Greg's documentation
 email: greg-martinez44@outlook.com
+description: Greg's blogging site for testing GitHub Pages.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  greg-martinez44
@@ -105,3 +106,9 @@ callouts:
   warning:
     title: Warning
     color: red
+
+# Footer content
+gh_edit_link: true
+gh_edit_link_text: "Edit this page on GitHub."
+gh_repository: https://github.com/greg-martinez44/greg-martinez44.github.io
+gh_edit_view_mode: edit
