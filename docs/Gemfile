@@ -1,14 +1,13 @@
 source "https://rubygems.org"
 
 # If you have any plugins, put them here!
-group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.12"
-  gem "jekyll-sitemap"
-  gem "ostruct"
-  gem "html-proofer", "~> 5.0"
-  gem "jekyll-github-metadata", ">= 2.15"
-  gem "jekyll-include-cache"
-  gem "just-the-docs"
-  gem "base64"
-  gem "csv"
-end
+gem "jekyll-feed", "~> 0.12"
+gem "jekyll-sitemap"
+gem "ostruct"
+gem "html-proofer", "~> 5.0"
+gem "jekyll-github-metadata", ">= 2.15"
+gem "jekyll-include-cache"
+gem "just-the-docs"
+gem "base64"
+gem "csv"
+gem "libcurl"
