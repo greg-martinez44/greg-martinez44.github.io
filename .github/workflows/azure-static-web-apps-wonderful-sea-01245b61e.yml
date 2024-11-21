@@ -9,63 +9,89 @@ on:
     branches:
       - main
 
+env:
+  RESOURCE_GROUP: rg-swa
+  LOCATION: westus2
+  STATICWEBAPPNAME: gmarti-swa
+
 jobs:
   build_and_deploy_job:
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: docs
-    name: Build and Deploy Job
-    permissions:
-       id-token: write
-       contents: read
+    name: Build and deploy
     steps:
       - uses: actions/checkout@v4
         with:
           submodules: true
-          lfs: false
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
+
+      - name: Azure login
+        uses: azure/login@v2
         with:
-          ruby-version: '3.3' # Not needed with a .ruby-version file
-          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-          cache-version: 0 # Increment this number if you need to re-download cached gems
-          working-directory: '${{ github.workspace }}/docs'
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v5
-      - name: Build with Jekyll
-        # Outputs to the './_site' directory by default
-        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
-        env:
-          JEKYLL_ENV: production
-      - name: Upload artifact
-        # Automatically uploads an artifact from the './_site' directory by default
-        uses: actions/upload-pages-artifact@v3
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+
+      - name: Set deployment name
+        id: deployment_name
+        run: |
+          REF_SHA='${{ github.ref }}.${{ github.sha }}'
+          DEPLOYMENT_NAME="${REF_SHA////-}"
+          echo "DEPLOYMENT_NAME=$DEPLOYMENT_NAME" >> $GITHUB_OUTPUT
+
+      - name: Static Web App - get API key
+        id: static_web_app_apikey
+        uses: azure/CLI@v2
         with:
-          path: "docs/_site/"
-      - name: Build And Deploy
-        id: builddeploy
+          inlineScript: |
+            APIKEY=$(az staticwebapp secrets list --name '${{ env.STATICWEBAPPNAME }}' | jq -r '.properties.apiKey')
+            echo "APIKEY=$APIKEY" >> $GITHUB_OUTPUT
+
+      - name: Static Web App - build and deploy
+        id: static_web_app_build_and_deploy
         uses: Azure/static-web-apps-deploy@v1
         with:
-          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_WONDERFUL_SEA_01245B61E }}
-          action: "upload"
-          ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
-          # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
-          app_location: "./docs" # App source code path
-          api_location: "" # Api source code path - optional
-          app_artifact_location: ./docs/_site
-          github_id_token: ${{ steps.idtoken.outputs.result }}
-          ###### End of Repository/Build Configurations ######
+          azure_static_web_apps_api_token: ${{ steps.static_web_app_apikey.outputs.APIKEY }}
+          action: 'upload'
+          app_location: './docs'
+          output_location: '_site'
+
+      - name: Static Web App - get preview URL
+        id: static_web_app_preview_url
+        uses: azure/CLI@v2
+        with:
+          inlineScript: |
+            DEFAULTHOSTNAME=$(az staticwebapp show -n '${{ env.STATICWEBAPPNAME }}' | jq -r .'.defaultHostname')
+            echo $DEFAULTHOSTNAME
+
+            PREVIEW_URL="https://${DEFAULTHOSTNAME/.[1-9]./-${{ github.event.pull_request.number }}.${{ env.LOCATION }}.1.}"
+
+            echo "PREVIEW_URL=$PREVIEW_URL" >> $GITHUB_OUTPUT
+    outputs:
+      preview-url: ${{ steps.static_web_app_preview_url.outputs.PREVIEW_URL }}
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
     runs-on: ubuntu-latest
-    name: Close Pull Request Job
+    name: Cleanup pull request staging environment
     steps:
-      - name: Close Pull Request
+      - name: Azure login
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+
+      - name: Get API key for deployment
+        id: apiKey
+        uses: azure/CLI@v2
+        with:
+          inlineScript: |
+            APIKEY=$(az staticwebapp secrets list --name '${{ env.STATICWEBAPPNAME }}' | jq -r '.properties.apiKey')
+            echo "APIKEY=$APIKEY" >> $GITHUB_OUTPUT
+
+      - name: Close pull request
         id: closepullrequest
         uses: Azure/static-web-apps-deploy@v1
         with:
-          action: "close"
+          azure_static_web_apps_api_token: ${{ steps.apikey.outputs.APIKEY }}
+          action: 'close'
