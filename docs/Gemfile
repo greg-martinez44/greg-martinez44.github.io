@@ -1,6 +1,7 @@
 source "https://rubygems.org"
 
 # If you have any plugins, put them here!
+gem "jekyll"
 gem "jekyll-feed", "~> 0.12"
 gem "jekyll-sitemap"
 gem "ostruct"
