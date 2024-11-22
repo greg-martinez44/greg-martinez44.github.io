@@ -15,7 +15,9 @@ jobs:
     runs-on: ubuntu-latest
     env:
       RUBY_VERSION: 3.1.3
-      APP_BUILD_COMMAND: "bundle exec jekyll serve"
+      PRE_BUILD_COMMAND: "gem install jekyll bundler"
+      POST_BUILD_COMMAND: "bundle exec jekyll serve"
+      DISABLE_RUBY_BUILD: true
     name: Build and Deploy Job
     steps:
       - uses: actions/checkout@v3
